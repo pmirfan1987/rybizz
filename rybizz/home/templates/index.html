@@ -33,7 +33,10 @@
           font-size: 3.5rem;
         }
       }
+      {% block style %}
+      {% endblock %}
     </style>
+ 
 
     
     <!-- Custom styles for this template -->
@@ -72,9 +75,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'product' %}">
-              <span data-feather="shopping-cart"></span>
-              Products
+            <a class="nav-link" href="{% url 'SampleTable' %}">
+              <span data-feather="file"></span>
+              SampleTable
             </a>
           </li>
           <li class="nav-item">
