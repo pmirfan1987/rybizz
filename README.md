@@ -18,3 +18,10 @@ python manage.py runserver
 13 Cache
 14 Rabit MQ
 15 Dockers/Kubernetics
+
+
+.button5 {
+             background-color: white;
+             color: black;
+             border: 2px solid #555555; 
+             }

@@ -3,23 +3,43 @@
     {% block style %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Table Example</title>
+    <title><b>Dynamic Table Example</b></title>
     <style>
         table {
             border-collapse: collapse;
             width: 50%;
             margin: 20px;
+            background-color: rgb(156, 156, 154);
         }
+        tr:hover {background-color: rgb(156, 156, 155);}
 
         th, td {
-            border: 1px solid #ddd;
+            border: 2px solid #cfcdcd77;
             padding: 8px;
             text-align: left;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #b6b4b4;
         }
+        body {
+              background-color: rgba(201, 201, 198, 0.445);  
+        }
+        .button5 {
+             background-color: white;
+             color: black;
+             border: 2px solid #222222; 
+             border-radius: 8px;
+             font-size:16px;
+             width:20%;
+             
+
+             }
+             .button5:hover {
+              background-color: #555555;
+              color: white;
+             }
+        
     </style>
     {% endblock %}
 
@@ -29,7 +49,7 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
  <h2>Dynamic Table Example</h2>
 </div>
-<button onclick="addRow()">Add Row</button>
+
 
 <table id="dynamic-table" class="table table-lite">
     <thead>
@@ -43,6 +63,9 @@
         <!-- Initial table content goes here (if any) -->
     </tbody>
 </table>
+
+   <center> <button  onclick="addRow()" class="button5 btn btn-lite " ><b>Add Row</b></button> </center>
+   
 
 <script>
     function addRow() {
