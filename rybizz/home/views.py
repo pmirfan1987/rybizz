@@ -6,3 +6,8 @@ def home(request):
 
 def product(request):
     return render(request, "product.html")
+
+def product_cpy(request):
+    return render(request, "product copy.html")
+
+
