@@ -50,6 +50,18 @@
  <h2>Dynamic Table Example</h2>
 </div>
 
+<form id="data-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br>
+
+    <button type="button" onclick="addRow()">Add to Table</button>
+</form>
 
 <table id="dynamic-table" class="table table-lite">
     <thead>
@@ -80,6 +92,8 @@
         cell1.innerHTML = "John Doe";
         cell2.innerHTML = "25";
         cell3.innerHTML = "john@example.com";
+        
+       //$('tbody').html("<tr><td><input type='text' ></td><td><input type='text' ></td><td><input type='text' ></td></tr>"); 
     }
 </script>
 {% endblock %}
