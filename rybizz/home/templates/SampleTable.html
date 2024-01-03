@@ -50,17 +50,17 @@
  <h2>Dynamic Table Example</h2>
 </div>
 
-<form id="data-form">
+<form id="data-form" method="post"> {% csrf_token %}
     <label for="name">Name:</label>
-    <input type="text" id="name" required><br>
+    <input type="text" id="name" name="name" required><br>
 
     <label for="age">Age:</label>
-    <input type="number" id="age" required><br>
+    <input type="number" id="age" name="age" required><br>
 
     <label for="email">Email:</label>
-    <input type="email" id="email" required><br>
+    <input type="email" id="email" name="email" required><br>
 
-    <button type="button" onclick="addRow()">Add to Table</button>
+    <button type="submit"  >Add to Table</button>
 </form>
 
 <table id="dynamic-table" class="table table-lite">
@@ -76,26 +76,10 @@
     </tbody>
 </table>
 
-   <center> <button  onclick="addRow()" class="button5 btn btn-lite " ><b>Add Row</b></button> </center>
+   <center> <button class="button5 btn btn-lite " ><b>Add Row</b></button> </center>
    
 
-<script>
-    function addRow() {
-        var table = document.getElementById("dynamic-table");
-        var newRow = table.insertRow(table.rows.length);
-        
-        var cell1 = newRow.insertCell(0);
-        var cell2 = newRow.insertCell(1);
-        var cell3 = newRow.insertCell(2);
 
-        // You can customize the data to be added
-        cell1.innerHTML = "John Doe";
-        cell2.innerHTML = "25";
-        cell3.innerHTML = "john@example.com";
-        
-       //$('tbody').html("<tr><td><input type='text' ></td><td><input type='text' ></td><td><input type='text' ></td></tr>"); 
-    }
-</script>
 {% endblock %}
 
 </html>

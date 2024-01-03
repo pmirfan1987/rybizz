@@ -2,8 +2,15 @@
 #run
 python manage.py runserver
 
+#for prepare migration
+ python .\manage.py makemigrations
+
+#for migration
+ python .\manage.py migrate
+
+ 
 #RoadMap#
-1 Views
+1 Views 
 2 Routers
 3 Forms
 4 Get Post
