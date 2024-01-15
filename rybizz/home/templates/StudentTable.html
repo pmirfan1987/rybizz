@@ -1,0 +1,82 @@
+{% extends 'index.html'%}
+
+{% block style%}
+<style>
+.container {
+ margin-left: 200px;
+}
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+            background-color: rgb(156, 156, 154);
+        }
+        tr:hover {background-color: rgb(156, 156, 155);}
+
+        th, td {
+            border: 2px solid #cfcdcd77;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #b6b4b4;
+        }
+        body {
+              background-color: rgba(201, 201, 198, 0.445);  
+        }
+</style>
+{% endblock %}
+
+{% block body%}
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+<div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="container">
+    <form>
+        <label for="fname"><b>First name:</b></label>
+        <input type="text" id="fname" name="fname" required><br><br>
+
+        <label for="lname"><b>Last name :</b></label>
+        <input type="text" id="lname" name="lname" required><br><br>
+
+        <label for="email"><b>Email     :</b></labeL>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone"><b>Phone No  :</b></labeL>
+        <input type="number" id="phone" name="phone" required><br><br>
+
+        <label for="DOB"><b>DOB         :</b></labeL>
+        <input type="text" id="DOB" name="DOB" required><br>
+
+        <input type="submit" value="submit">
+        <!--<button><b>submit</b></button>-->
+        <button  onclick="addRow()" class="button5 btn btn-lite " ><b>Submit</b></button>
+    </form>
+</div>
+</div>
+<div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom"></div>
+    <h4>Student Table</h4>
+    <div class="container">
+    <table  class="table table-lite">
+    
+        
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Phone No</th>
+                <th>DOB</th>
+            </tr>
+        
+        
+    </table>  
+    </div> 
+    </div>    
+{% endblock %}
+   
+   
+   
+    </html>

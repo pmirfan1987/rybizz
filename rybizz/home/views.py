@@ -6,3 +6,7 @@ def home(request):
 
 def SampleTable(request):
     return render(request, "SampleTable.html")
+
+def StudentTable(request):
+    return render(request, "StudentTable.html")
+

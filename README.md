@@ -20,8 +20,8 @@ python manage.py runserver
 15 Dockers/Kubernetics
 
 
-.button5 {
-             background-color: white;
-             color: black;
-             border: 2px solid #555555; 
-             }
+<th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Phone No</th>
+                <th>DOB</th> 
