@@ -1,0 +1,94 @@
+{% extends 'index.html'%}
+
+    {% block style %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><b>Dynamic Table Example</b></title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+            background-color: rgb(156, 156, 154);
+        }
+        tr:hover {background-color: rgb(156, 156, 155);}
+
+        th, td {
+            border: 2px solid #cfcdcd77;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #b6b4b4;
+        }
+        body {
+              background-color: rgba(201, 201, 198, 0.445);  
+        }
+        .button5 {
+             background-color: white;
+             color: black;
+             border: 2px solid #222222; 
+             border-radius: 8px;
+             font-size:13px;
+             width:15%;
+             margin-left: 50px;
+             margin-top: 15px;
+             margin-bottom: 15px;
+             
+
+             }
+             .button5:hover {
+              background-color: #555555;
+              color: white;
+             }
+             form {
+                
+                margin-left: 30px;
+             }
+        
+    </style>
+    {% endblock %}
+
+
+{% block body %}
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+ 
+</div>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Student Information</h5>
+      <p class="card-text">{{student.id}} <br>{{student.fname}}</p>
+      <a href="{% url 'StudentTable' %}" class="btn btn-primary">Back</a>
+    </div>
+  </div>
+
+
+   
+   
+
+<script>
+    function addRow() {
+        var table = document.getElementById("dynamic-table");
+        var newRow = table.insertRow(table.rows.length);
+        
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+
+        // You can customize the data to be added
+        cell1.innerHTML = "John Doe";
+        cell2.innerHTML = "25";
+        cell3.innerHTML = "john@example.com";
+        
+       //$('tbody').html("<tr><td><input type='text' ></td><td><input type='text' ></td><td><input type='text' ></td></tr>"); 
+    }
+</script>
+{% endblock %}
+
+</html>

@@ -66,20 +66,23 @@
     
         
             <tr>
-               <!-- <th>Application No</th> --> 
+               <th>Application No</th> 
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email</th>
                 <th>Phone No</th>
                 <th>DOB</th>
+                <th>Action</th>
             </tr>
            {% for d in students %}
             <tr>
+                <td>{{d.id}}</td>
                 <td>{{d.fname}}</td>
                 <td>{{d.lname}}</td>
                 <td>{{d.email}}</td>
                 <td>{{d.phone}}</td>
                 <td>{{d.DOB}}</td>
+                <td><a href="StudentTable/{{d.id}}" class="">View</td>
                 
             </tr>
             {% endfor %}

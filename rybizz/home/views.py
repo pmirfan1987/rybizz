@@ -29,3 +29,7 @@ def StudentTable(request):
        
     return render(request, "StudentTable.html",{"students":db})
 
+def StudentDetail(request,id):
+    db = Student.objects.get(id=id) # select * from Student where id=id
+    
+    return render(request, "StudentDetail.html",{"student":db})
