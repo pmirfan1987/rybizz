@@ -2,6 +2,9 @@
 #run
 python manage.py runserver
 
+ python .\manage.py makemigrations
+ python .\manage.py migrate  --- for migration(if any change in the models run this)
+
 #RoadMap#
 1 Views
 2 Routers

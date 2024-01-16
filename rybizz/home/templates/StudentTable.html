@@ -30,13 +30,14 @@
 {% endblock %}
 
 {% block body%}
+
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
 <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <div class="container">
-        <h2>Student Form</h2><br>
-    <form method="post">
+        <h2>Student Form </h2><br>
+    <form method="post"> {% csrf_token %}
         <label for="fname"><b>First name:</b></label>
         <input type="text" id="fname" name="fname" required><br><br>
 
@@ -44,17 +45,17 @@
         <input type="text" id="lname" name="lname" required><br><br>
 
         <label for="email"><b>Email _____:</b></labeL>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="text" id="email" name="email" required><br><br>
 
         <label for="phone"><b>Phone No  :</b></labeL>
-        <input type="number" id="phone" name="phone" required><br><br>
+        <input type="text" id="phone" name="phone" required><br><br>
 
         <label for="DOB"><b>DOB_______:</b></labeL>
-        <input type="text" id="DOB" name="DOB" required><br>
+        <input type="date" id="DOB" name="DOB" required><br>
 
-        <input type="submit" value="submit">
+        <input type="submit" value="submit"> 
         <!--<button><b>submit</b></button>-->
-        <button  onclick="addRow()" class="button5 btn btn-lite " ><b>Submit</b></button>
+        <!--<button  onclick="addRow()" class="button5 btn btn-lite " ><b>Submit</b></button>-->
     </form>
 </div>
 </div>
@@ -65,13 +66,23 @@
     
         
             <tr>
-                <th>Application No</th>
+               <!-- <th>Application No</th> --> 
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email</th>
                 <th>Phone No</th>
                 <th>DOB</th>
             </tr>
+           {% for d in students %}
+            <tr>
+                <td>{{d.fname}}</td>
+                <td>{{d.lname}}</td>
+                <td>{{d.email}}</td>
+                <td>{{d.phone}}</td>
+                <td>{{d.DOB}}</td>
+                
+            </tr>
+            {% endfor %}
         
         
     </table>  
